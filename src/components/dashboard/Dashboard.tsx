@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Plus, Search } from "lucide-react"
+import { Search } from "lucide-react"
 import { v4 as uuidv4 } from "uuid"
 import Header from "../shared/Header"
 import InterviewSection from "../interviews/InterviewSection"

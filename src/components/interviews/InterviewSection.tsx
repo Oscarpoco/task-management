@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Plus, Search, Filter, ChevronRight, ChevronLeft } from "lucide-react"
+import { Plus } from "lucide-react"
 import InterviewCard from "./InterviewCard"
 import InterviewForm from "./InterviewForm"
 import { useToast } from "../ui/toast"
@@ -33,7 +33,7 @@ export default function InterviewSection({ interviews, onAddInterview }: Intervi
     <div className="mb-8 fade-in">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
-          <h2 className="text-lg font-semibold">Interview</h2>
+          <h2 className="text-lg font-semibold" onClick = {()=> setFilter("all")}>Interview</h2>
           <span className="text-sm text-muted-foreground">{filteredInterviews.length}</span>
         </div>
 
@@ -46,7 +46,8 @@ export default function InterviewSection({ interviews, onAddInterview }: Intervi
 
         <button
           className="min-w-[240px] h-[auto] rounded-xl border-2 border-dashed border-border flex items-center justify-center text-muted-foreground hover:text-foreground hover:border-primary/50 transition-colors"
-          onClick={() => setIsFormOpen(true)}
+          onClick={() => setIsFormOpen(true)
+          } 
         >
           <Plus size={24} />
           <span className="ml-2">Add New Interview</span>

@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Plus, Search, Filter, ChevronRight, ChevronLeft } from "lucide-react"
+import { Plus } from "lucide-react"
 import TaskCard from "./TaskCard"
 import TaskForm from "./TaskForm"
 import { useToast } from "../ui/toast"
@@ -32,7 +32,7 @@ export default function TaskSection({ tasks, onAddTask }: TaskSectionProps) {
     <div className="mb-8 fade-in">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
-          <h2 className="text-lg font-semibold">Tasks</h2>
+          <h2 className="text-lg font-semibold" onClick = {()=> setFilter("all")}>Tasks</h2>
           <span className="text-sm text-muted-foreground">{filteredTasks.length}</span>
         </div>
 
